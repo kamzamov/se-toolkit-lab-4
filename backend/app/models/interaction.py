@@ -30,11 +30,10 @@ class InteractionLogCreate(SQLModel):
     kind: str
 
 
-class InteractionModel(SQLModel):
-    """Response schema for an interaction."""
-
+# Стало (ИСПРАВЛЕНО):
+class InteractionModel(BaseModel):
     id: int
     learner_id: int
     item_id: int
     kind: str
-    timestamp: datetime
+    created_at: datetime  # ✅
