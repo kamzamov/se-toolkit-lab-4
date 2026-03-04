@@ -5,7 +5,7 @@ from sqlmodel import Field, SQLModel
 
 
 class InteractionLog(SQLModel, table=True):
-    __tablename__ = "interactions"  # ✅ ИСПРАВЛЕНО
+    __tablename__ = "interacts"  # ✅ ИСПРАВЛЕНО
 
     id: int | None = Field(default=None, primary_key=True)
     learner_id: int = Field(...)
